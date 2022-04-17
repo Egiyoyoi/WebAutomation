@@ -4,7 +4,7 @@ import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 
-@DefaultUrl("https://www.facebook.com/login")
+@DefaultUrl("https://www.facebook.com/login/")
 public class LoginPageObjects extends PageObject {
     public static Target EMAIL_FIELD = Target.the("email field")
             .locatedBy("#email");

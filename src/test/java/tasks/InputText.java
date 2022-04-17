@@ -5,7 +5,6 @@ import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.targets.Target;
-import orange_hrm.pageobjects.HRMLeavePageObjects;
 import orange_hrm.pageobjects.HRMLoginPageObjects;
 import orange_hrm.pageobjects.HRMPIMPageObjects;
 
@@ -37,24 +36,6 @@ public class InputText {
                 break;
             case "employeeName":
                 field = HRMPIMPageObjects.EMPLOYEE_NAME;
-                break;
-            case "Employee":
-                field = HRMLeavePageObjects.EMPLOYEE_FIELD;
-                break;
-            case "leaveType":
-                field = HRMLeavePageObjects.LEAVE_TYPE_FIELD;
-                break;
-            case "leavePeriod":
-                field = HRMLeavePageObjects.LEAVE_PERIOD_FIELD;
-                break;
-            case "Entitlement":
-                field = HRMLeavePageObjects.ENTITLEMENT;
-                break;
-            case "leaveList":
-                field = HRMLeavePageObjects.LEAVE_LIST;
-                break;
-            case "fromField":
-                field = HRMLeavePageObjects.FROM_FIELD;
                 break;
             default:
               throw new Exception("There is no field type: " + fieldType);

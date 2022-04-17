@@ -32,10 +32,11 @@ public class PIMStepDefinitions {
 
     @When("{actor} add new employee with required field only")
     public void iAddNewEmployeeWithRequiredFieldOnly(Actor actor) throws Exception {
+        System.out.println(actor);
         actor.attemptsTo(
                 ClickOn.button("Add"),
-                InputText.onField("firstname", "Teguh"),
-                InputText.onField("lastname", "Pratama"),
+                InputText.onField("firstName", "Muhammad"),
+                InputText.onField("lastName", "Pratama"),
                 ClickOn.button("Save")
         );
     }
@@ -50,8 +51,21 @@ public class PIMStepDefinitions {
         actor.attemptsTo(
                 ClickOn.employeeList(),
                 ClickOn.button("Edit"),
-                InputText.onField("editMiddleName"," Tanjung"),
+                InputText.onField("editMiddleName","Teguh"),
                 ClickOn.button("Save")
         );
+    }
+
+    @Then("I can see the Personal Details has changed")
+    public void iCanSeeThePersonalDetailsHasChanged() {
+    }
+
+    @Then("I delete new employee")
+    public void iDeleteNewEmployee() {
+        
+    }
+
+    @Then("I can't see deleted employee on list")
+    public void iCanTSeeDeletedEmployeeOnList() {
     }
 }

@@ -4,7 +4,6 @@ import fb.pageobjects.LoginPageObjects;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;
-import orange_hrm.pageobjects.HRMLeavePageObjects;
 import orange_hrm.pageobjects.HRMLoginPageObjects;
 import orange_hrm.pageobjects.HRMPIMPageObjects;
 
@@ -21,9 +20,6 @@ public class NavigateTo {
                 break;
             case "HRM Employee List":
                 url = HRMPIMPageObjects.class;
-                break;
-            case "HRM Add Entitlements":
-                url = HRMLeavePageObjects.class;
                 break;
             default:
                 throw new Exception("url missing: " + urlType);

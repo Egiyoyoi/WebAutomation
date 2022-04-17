@@ -1,8 +1,9 @@
+@all @hrmcrud
 Feature: Orange HRM - CRUD Employee Data
 
   Background:
     Given I open Orange HRM login page
-    When I input username and password
+    And I input username and password
     And I click login button
     And I access employee list
 
@@ -16,7 +17,7 @@ Feature: Orange HRM - CRUD Employee Data
     Then I can see new employee list result
 
   @hrmupdate
-  Scenario: User update Orange HRM employee list successfully
+  Scenario: User update Orange HRM employee successfully
     When I search for new employee
     And I update new employee's middle name
     Then I can see the Personal Details has changed
@@ -24,5 +25,5 @@ Feature: Orange HRM - CRUD Employee Data
   @hrmdelete
   Scenario: User delete Orange HRM employee successfully
     When I search for new employee
-    Then I delete new employee
+    And I delete new employee
     Then I can't see deleted employee on list

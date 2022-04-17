@@ -6,7 +6,6 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import orange_hrm.pageobjects.HRMLeavePageObjects;
 import orange_hrm.pageobjects.HRMLoginPageObjects;
 import orange_hrm.pageobjects.HRMPIMPageObjects;
 
@@ -53,13 +52,6 @@ public class ClickOn {
             case "Search":
                 button = HRMPIMPageObjects.SEARCH_BUTTON;
                 break;
-            case "Add Entitlements":
-                button = HRMLeavePageObjects.ADD_ENTITLEMENTS;
-                break;
-            case "Save":
-                button = HRMLeavePageObjects.SAVE_BUTTON;
-                break;
-
             default:
               throw new Exception("There is no button type: " + buttonType);
         }
