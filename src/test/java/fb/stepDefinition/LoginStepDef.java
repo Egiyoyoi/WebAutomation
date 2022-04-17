@@ -19,15 +19,15 @@ public class LoginStepDef {
         String password = dotenv.get("PASSWORD_FB");
 
         actor.attemptsTo(
-          InputText.onField("FB email", email),
-          InputText.onField("FB password", password)
+          InputText.onField("FB Email", email),
+          InputText.onField("FB Password", password)
         );
     }
 
     @And("{actor} click button login")
     public void clickButton(Actor actor) throws Exception {
       actor.attemptsTo(
-           ClickOn.button("Log in")
+           ClickOn.button("FB Log In")
       );
     }
 }
